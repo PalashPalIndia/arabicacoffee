@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
+    <title>Form</title>
+    <body>
+
+      <div class="header">
+        <div class="container">
+          <div class="navbar">
+            <div class="logo">
+              <!--
+              <img src="./images/" width="125px" />
+                -->
+            </div>
+            <nav style="margin-top: 20px;">
+              <ul id="menuitems">
+                <li><a href="{{url_for('index')}}"><b>Home</b></a></li>
+  
+                <li>
+                  <a href="{{url_for('carbon_sequestration')}}"><b>Carbon-Sequestration</b></a>
+                </li>
+  
+                <li><a href="{{url_for('commercial')}}"><b>Commercial-Opportunity</b></a></li>
+  
+                <li><a href="{{url_for('carbon_credit')}}"><b>Carbon-Credit Scheme</b></a></li>
+  
+                <li><a href="{{url_for('future')}}"><b>Future</b></a></li>
+  
+  
+                <li><a href="{{url_for('references')}}"><b>References</b></a></li>
+  
+                <li>
+                  <a href="{{url_for('comments')}}"><b>Comments & Suggestions</b></a>
+                </li>
+  
+              </ul>
+            </nav><img
+              src="{{url_for('static', filename='images/menu.png')}}"
+              class="menu-icon"
+              onclick="menutoggle()"
+            />
+           
+           
+           
+          </div>
+        </div>
+      </div>      
+
+      <form action="">
+        <div class="container"><br><br>
+          <h1>Post your comment and Suggestions</h1><br><br>
+          
+          
+      
+          <label for="fname"><b>First Name</b></label>
+          <input type="text" placeholder="Enter First Name" name="fname" id="fname" required>
+          
+          <label for="lname"><b>Last Name</b></label>
+          <input type="text" placeholder="Enter Last Name" name="lname" id="lname" required>
+          
+          <label for="village"><b>Village Name</b></label>
+          <input type="text" placeholder="Enter Your Village" name="village" id="village" required>
+          
+          <label for="zip"><b>Pin Code</b></label>
+          <input type="text" placeholder="Enter Pin Code" name="zip" id="zip" required>
+          
+          <label for="phone"><b>Mobile Number</b></label>
+          <input type="text" placeholder="Enter Your Mobile Number" name="phone" id="phone" required>
+          
+          <label for="comments"><b>Enter Your Comment</b></label>
+          <input type="text" placeholder="Enter Your Comments" name="comments" id="comments" required>
+          
+
+      
+          
+          <button type="submit" class="registerbtn">submit</button> <br><br><br>
+        </div>
+      
+      </form>
+
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col-1">
+              <h3>Stay in touch</h3>
+              <p>Contact for further information</p>
+              <div class="app-logo">
+                <p></p>
+                <p>
+                  Call: To be Updated<br />
+                  Email: To be Updated
+                </p>
+                <!--<img src="./images/play-store.png" />
+                <img src="./images/app-store.png" />
+                -->
+              </div>
+            </div>
+  
+            <div class="footer-col-2">
+              <img src="{{url_for('static', filename='images/IMG-0235.jpg')}}" />
+              <p>
+                We strive to start the conversation on Carbon Credits
+              </p>
+            </div>
+            <div class="footer-col-3">
+              <h3>Useful Links</h3>
+              <ul>
+                <li><a href="https://www.researchgate.net/publication/338792329_Coffee_Climate_and_Biodiversity_Understanding_the_Carbon_Stocks_of_the_Shade_Coffee_Production_System_of_India#:~:text=It%20is%20estimated%20that%20one,an%20equal%20area%20of%20forest."><small><i style="color:#efefe8"> https://www.researchgate.net/publication</small></i></a></li>
+                 <li> <a href="http://www.coffeeboard.gov.in"><small><i style="color:#efefe8"> www.coffeeboard.gov.in </small></i></a></li>
+                
+                <li><a href="./references.html"><small><i style="color:#efefe8"> References</small></i></a></a></li>
+              </ul>
+            </div>
+            <div class="footer-col-3">
+              <h3>Follow Us</h3>
+              <ul>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>YouTube</li>
+              </ul>
+            </div>
+          </div>
+          <hr />
+          <p class="Copyright">Copyright 2023 - Ahaan A.</p>
+        </div>
+      </div>
+      <!-- js for toggle menu -->
+      <script>
+        var menuitems = document.getElementById("menuitems");
+        menuitems.style.maxHeight = "0px";
+        function menutoggle() {
+          if (menuitems.style.maxHeight == "0px") {
+            menuitems.style.maxHeight = "500px";
+          } else {
+            menuitems.style.maxHeight = "0px";
+          }
+        }
+      </script>
+  
+    </body>
+</html>
